@@ -1,5 +1,5 @@
 module RORO_tb ();
-// Señales de estímulo y monitoreo
+
   reg [11:0] instruccion;
   wire[31:0] resultado;
   wire ZF;
