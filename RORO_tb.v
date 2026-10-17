@@ -5,7 +5,7 @@ module RORO_tb ();
   wire ZF;
 
 // Instancia del núcleo RORO (ROMa + ROMina + MIPSALU)
-  RORO uut (
+  RORO out (
     .instruccion(instruccion),
     .resultado(resultado),
     .ZF(ZF)
