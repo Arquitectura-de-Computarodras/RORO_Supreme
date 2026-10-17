@@ -31,5 +31,7 @@ Diseñar, integrar y simular el módulo superior RORO Supreme, un sistema digita
 
 ### Referencias
 ARITH-MATIC. (s. f.). Arithmetic Logic Units (ALU): an Introduction. https://arith-matic.com/notebook/arithmetic-logic-unit-introduction 
+
 Hp. (2026, 23 julio). RAM y ROM: ¿Cuál es la diferencia? HP® México. https://www.hp.com/mx-es/tech-takes/componentes/comparativas/ram-y-rom-cual-es-la-diferencia.html 
+
 Test Management Tool. (2026, 13 agosto). TestBench. https://www.testbench.com/
