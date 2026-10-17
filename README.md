@@ -28,6 +28,13 @@ Para llevar a cabo esta actividad, en equipo nos encargamos de diseñar e implem
 
 Ya con las memorias listas, armamos el módulo RORO Supreme conectando la dirección de instrucción con el núcleo RORO, el cual se encarga de leer los campos OP, R1 y R2 para extraer los operandos de 32 bits y pasárselos a la ALU. Para comprobar que todo funcionara correctamente, desarrollamos los testbenches RORO_tb y RORO_Supreme_tb con verificaciones automáticas. El testbench principal recorrió las 16 direcciones de memoria para comparar los resultados obtenidos de DD y ZF frente a la tabla de referencia oficial, lo que nos permitió validar sin errores las sumas, las restas positivas y negativas en complemento a dos, los casos con resultado cero y bandera ZF en uno, y las comparaciones SLT. Finalmente, integramos todos los archivos y códigos en el repositorio de GitHub de nuestra organización.
 
+<img width="579" height="417" alt="image" src="https://github.com/user-attachments/assets/2d7953f7-b891-4b13-9926-5b48580f443c" />
+Análisis de la simulación (imagen anterior):
+
+*Resta negativa (Caso 9): Aquí la instrucción nos pide restar 9 menos 50. Como el resultado matemático es -41, la ALU lo procesa utilizando la lógica de complemento a dos. Por eso, al visualizar la gráfica en formato sin signo (unsigned), el simulador nos arroja ese número gigante 4294967255.
+
+*Bandera ZF en 1 (Caso 11): En esta dirección se ejecuta la resta de 2 menos 2. Como el resultado final en la salida DD es exactamente cero, la bandera condicional ZF (Zero Flag) detecta esto y se activa automáticamente pasando a 1.
+
 
 ### - Conclucion .-*
 Con la realización de este proyecto de RORO Supreme, comprendimos de forma mucho más clara cómo funciona la ruta de datos (Datapath) de un procesador. Logramos conectar correctamente las memorias con la ALU, viendo en la práctica cómo una instrucción de 12 bits es capaz de indicarle al sistema qué datos tomar y qué operación matemática debe hacer con ellos.
