@@ -24,6 +24,9 @@ Diseñar, integrar y simular el módulo superior RORO Supreme, un sistema digita
 - Desarrollar e implementar el banco de pruebas testbech, para comprobar los resultados esperados 
 
 ### Desarrollo
+Para llevar a cabo esta actividad, en equipo nos encargamos de diseñar e implementar el módulo superior RORO Supreme, con el fin de ejecutar una secuencia de 16 instrucciones de 12 bits combinando memorias ROM y una unidad aritmético-lógica. Primero revisamos las interfaces de los módulos base que ya teníamos para aprovechar su funcionamiento original. Después, creamos la ROM de instrucciones de 16 posiciones configurándola mediante un archivo de texto en binario con readmemb, y adaptamos dos instancias independientes para ROMa y ROMina utilizando archivos en hexadecimal con readmemh.
+
+Ya con las memorias listas, armamos el módulo RORO Supreme conectando la dirección de instrucción con el núcleo RORO, el cual se encarga de leer los campos OP, R1 y R2 para extraer los operandos de 32 bits y pasárselos a la ALU. Para comprobar que todo funcionara correctamente, desarrollamos los testbenches RORO_tb y RORO_Supreme_tb con verificaciones automáticas. El testbench principal recorrió las 16 direcciones de memoria para comparar los resultados obtenidos de DD y ZF frente a la tabla de referencia oficial, lo que nos permitió validar sin errores las sumas, las restas positivas y negativas en complemento a dos, los casos con resultado cero y bandera ZF en uno, y las comparaciones SLT. Finalmente, integramos todos los archivos y códigos en el repositorio de GitHub de nuestra organización.
 
 
 ### Conclucion
