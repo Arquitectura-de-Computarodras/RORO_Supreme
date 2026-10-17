@@ -30,11 +30,23 @@ Ya con las memorias listas, armamos el módulo RORO Supreme conectando la direcc
 
 <img width="579" height="417" alt="image" src="https://github.com/user-attachments/assets/2d7953f7-b891-4b13-9926-5b48580f443c" />
 
-Análisis de la simulación (imagen anterior):
+Análisis de la Tabla (imagen anterior):
 
 *Resta negativa (Caso 9): Aquí la instrucción nos pide restar 9 menos 50. Como el resultado matemático es -41, la ALU lo procesa utilizando la lógica de complemento a dos. Por eso, al visualizar la gráfica en formato sin signo (unsigned), el simulador nos arroja ese número gigante 4294967255.
 
 *Bandera ZF en 1 (Caso 11): En esta dirección se ejecuta la resta de 2 menos 2. Como el resultado final en la salida DD es exactamente cero, la bandera condicional ZF (Zero Flag) detecta esto y se activa automáticamente pasando a 1.
+
+-.-.-.-.-.-.-
+
+<img width="1506" height="640" alt="image" src="https://github.com/user-attachments/assets/aa2f86db-5476-447c-9fb5-0caa26e998cb" />
+
+Análisis de la Simulacion (imagen anterior):
+
+*Al inicio mandamos la instrucción 001000000000 (suma): el resultado nos da 17 y la bandera ZF se queda en cero.   
+JPG
+
+*En el picosegundo 10 mandamos 011001100110 (resta): el resultado da 0 y vemos cómo la línea verde de la bandera ZF se levanta a 1, confirmando que detecta los ceros perfectamente.
+
 
 
 ### - Conclucion .-*
